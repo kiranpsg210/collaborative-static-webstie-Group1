@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - My Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    // Load navigation.html
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML += data;
+      })
+    // Load footer.html
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+
+    <header id="header">
+        <h1>EMC </h1>
+        <p>Weekly Assignment 3</p>
+    </header>
+
+  <section>
+    <h2>Welcome</h2>
+    <p>Hello! I'm John Doe, a passionate software developer who loves building modern web apps.</p>
+  </section>
+
+  <footer id="footer"></footer>
+</body>
+</html>
